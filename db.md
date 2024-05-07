@@ -1,3 +1,6 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
 Table Personal {
   UID varchar [pk]
   Nombre varchar
@@ -8,6 +11,21 @@ Table Personal {
 }
 
 Table Posgrado {
-  UID varchar [pk]
+  PID varchar [pk]
   Nombre varchar
+}
+
+Table Licenciatura {
+  LID varchar [pk]
+  Nombre varchar
+}
+
+Table ProfesoresPosgrado {
+  UID varchar [pk]
+  PID varchar
+}
+
+Table ProfesoresLicenciatura {
+  LID varchar [pk]
+  UID varchar
 }
